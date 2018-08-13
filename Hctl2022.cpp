@@ -2,13 +2,13 @@
 #include "Hctl2022.h"
 
 //hardcoded arduino port used
-#define SET_PORT DDRB
-#define READ_PORT PINB
+#define SET_PORT DDRD
+#define READ_PORT PIND
 
 Hctl2022::Hctl2022(int oe, int sel1, int sel2) 
 {
     // 8 bits bus from hctl2022
-    SET_PORT = B00000000; // set pin 13,12,11,6,5,4,3,2 as input
+    SET_PORT = B00000000; // set pin 7,6,5,4,3,2,1,0 as input
 
     // enable
     pinMode(oe, OUTPUT);
